@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: order_paper-batch
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/order_paper_db
+    username: order_manager
+    password: order!
+    driver-class-name: org.postgresql.Driver
+
+  batch:
+    jdbc:
+      initialize-schema: never
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
