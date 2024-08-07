@@ -11,6 +11,9 @@ spring:
   batch:
     jdbc:
       initialize-schema: never
+    job:
+      enabled: true
+      name: 'mergedJob'
 
   jpa:
     hibernate:
