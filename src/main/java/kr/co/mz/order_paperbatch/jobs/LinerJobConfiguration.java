@@ -26,8 +26,9 @@ public class LinerJobConfiguration {
   }
 
   @Bean
-  public Job job(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
-    return new JobBuilder("firstJob", jobRepository).start(step(jobRepository, transactionManager))
+  public Job linerJob(JobRepository jobRepository,
+      PlatformTransactionManager transactionManager) {
+    return new JobBuilder("linerJob", jobRepository).start(step(jobRepository, transactionManager))
         .build();
   }
 }
